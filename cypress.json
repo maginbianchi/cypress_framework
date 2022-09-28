@@ -1,0 +1,46 @@
+{
+	"baseUrl": "https://react-redux.realworld.io/#/login",
+	"chromeWebSecurity": false,
+	"watchForFileChanges": false,
+	"waitForAnimations": true,
+	"defaultCommandTimeout": 5000,
+	"execTimeout": 60000,
+	"pageLoadTimeout": 20000,
+	"requestTimeout": 10000,
+	"responseTimeout": 10000,
+	"video": false,
+	"failOnStatusCode": false,
+	"env": {
+		"cypress-plugin-snapshots": {
+			"imageConfig": {
+				"createDiffImage": true, 
+				"resizeDevicePixelRatio": true, 
+				"threshold": 0.01, 
+				"thresholdType": "percent" 
+			},
+			"screenshotConfig": {
+				"capture": "viewport"
+			}
+		}
+	},
+	"ignoreTestFiles": [
+		"**/1-getting-started/*",
+		"**/2-advanced-examples/*",
+		"**/__snapshots__/*",
+		"**/__image_snapshots__/*",
+		"*.js",
+		"*.md"
+	],
+	"testFiles": "**/*.feature",
+	"retries": {
+		"runMode": 2,
+		"openMode": 1
+	},
+	"reporter": "mochawesome",
+	"reporterOptions": {
+		"reportDir": "cypress/reports",
+		"overwrite": true,
+		"html": true,
+		"json": false
+	}
+}

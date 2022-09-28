@@ -1,0 +1,25 @@
+{
+  "name": "cypress_framework",
+  "version": "1.0.0",
+  "description": "Framework con Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --headless",
+    "cy:update-snapshots": "cypress run --env updateSnapshots=true"
+  },
+  "author": "Magin Bianchi",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-image-snapshot": "^4.0.1",
+    "cypress-plugin-snapshots": "^1.4.4",
+    "mochawesome": "^7.0.1",
+    "prettier": "^2.5.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/integration/step-definitions"
+  }
+}
